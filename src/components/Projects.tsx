@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github } from 'lucide-react';
-import SplineViewer from './SplineViewer';
 
 const projects = [
   {
@@ -188,11 +187,8 @@ export default function Projects() {
                         transition={{ delay: index * 0.1 }}
                       >
                         {index === 0 && (
-                          <div className="w-16 h-16">
-                            <SplineViewer 
-                              scene="https://prod.spline.design/6Wq1Q7YGyM-iab9X/scene.splinecode"
-                              className="w-full h-full opacity-60"
-                            />
+                          <div className="w-16 h-16 bg-gradient-to-br from-primary/30 to-primary/10 rounded-xl flex items-center justify-center">
+                            <div className="w-8 h-8 bg-primary/50 rounded-full animate-pulse" />
                           </div>
                         )}
                       </motion.div>

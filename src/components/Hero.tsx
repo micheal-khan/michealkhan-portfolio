@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Download, Github, Linkedin, Mail, Phone } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import SplineViewer from './SplineViewer';
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -141,17 +140,16 @@ export default function Hero() {
                 />
               </motion.div>
               
-              {/* Spline 3D Element Container */}
+              {/* 3D Accent - Ready for your Spline scene */}
               <motion.div
                 className="absolute -top-4 -right-4 w-32 h-32 opacity-80"
                 initial={{ opacity: 0, rotate: -10 }}
                 animate={{ opacity: 0.8, rotate: 0 }}
                 transition={{ delay: 1, duration: 1 }}
               >
-                <SplineViewer 
-                  scene="https://prod.spline.design/6Wq1Q7YGyM-iab9X/scene.splinecode"
-                  className="w-full h-full"
-                />
+                <div className="w-full h-full bg-gradient-to-br from-primary/20 via-primary/10 to-transparent rounded-xl flex items-center justify-center">
+                  <div className="w-16 h-16 bg-primary/30 rounded-full animate-float" />
+                </div>
               </motion.div>
             </div>
           </motion.div>
