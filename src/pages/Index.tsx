@@ -8,6 +8,8 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
 const Index = () => {
+  console.log('Portfolio app loaded successfully');
+  
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
