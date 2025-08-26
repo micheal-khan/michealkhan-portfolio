@@ -64,7 +64,8 @@ cd portfolio
 npm install
 
 # Run development server
-npm run dev
+npm run dev 
+```
 
 Then open http://localhost:3000 to view it.
 
