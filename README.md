@@ -64,11 +64,10 @@ cd portfolio
 npm install
 
 # Run development server
-npm run dev 
+npm run dev
 ```
 
 Then open http://localhost:3000 to view it.
-
 
 📬 Contact
 
@@ -76,9 +75,8 @@ Then open http://localhost:3000 to view it.
 
 Portfolio: micheal-khan-portfolio.vercel.app
 
-LinkedIn: [Your LinkedIn URL]
+LinkedIn: [\LinkedIn\]](https://www.linkedin.com/in/micheal-khan/)
 
-GitHub: [Your GitHub URL]
+GitHub: [\Github\]](https://github.com/igniteking)
 
-Email: [Your Email Address]
-```
+Email: [\khanzaidan786@gmail.com\]](mailto:khanzaidan786@gmail.com)
