@@ -75,8 +75,8 @@ Then open http://localhost:3000 to view it.
 
 Portfolio: micheal-khan-portfolio.vercel.app
 
-LinkedIn: [\LinkedIn\]](https://www.linkedin.com/in/micheal-khan/)
+LinkedIn: [LinkedIn\](https://www.linkedin.com/in/micheal-khan/)
 
-GitHub: [\Github\]](https://github.com/igniteking)
+GitHub: [Github\](https://github.com/igniteking)
 
-Email: [\khanzaidan786@gmail.com\]](mailto:khanzaidan786@gmail.com)
+Email: [khanzaidan786@gmail.com\](mailto:khanzaidan786@gmail.com)
