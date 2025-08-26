@@ -1,73 +1,83 @@
-# Welcome to your Lovable project
+# Micheal Khan - Portfolio 🚀
 
-## Project info
+![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)
+![Next.js](https://img.shields.io/badge/Next.js-13+-black?logo=next.js)
+![React](https://img.shields.io/badge/React-18-blue?logo=react)
+![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.0-blue?logo=tailwind-css)
+![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-**URL**: https://lovable.dev/projects/ef4be380-71a1-417d-8afd-82c6bf89c34f
+This is my personal developer portfolio built with **Next.js** and deployed on **Vercel**.  
+It showcases my projects, skills, and professional journey as a Software Developer.
 
-## How can I edit this code?
+🔗 **Live Site:** [micheal-khan-portfolio.vercel.app](https://micheal-khan-portfolio.vercel.app)
 
-There are several ways of editing your application.
+---
 
-**Use Lovable**
+## ✨ Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/ef4be380-71a1-417d-8afd-82c6bf89c34f) and start prompting.
+- Modern UI/UX with **Next.js + React**
+- Fully responsive design (mobile-first)
+- Smooth animations and transitions
+- Project showcase with descriptions and links
+- About Me section with skills and experience
+- Contact form for easy communication
+- SEO-friendly structure
+- Hosted on **Vercel** for blazing-fast performance
 
-Changes made via Lovable will be committed automatically to this repo.
+---
 
-**Use your preferred IDE**
+## 🛠️ Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Framework:** Next.js 13+
+- **Frontend:** React 18, Tailwind CSS
+- **Animations:** Framer Motion
+- **Deployment:** Vercel
+- **Other Tools:** ShadCN UI, Lucide Icons (if used)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+---
 
-Follow these steps:
+## 📂 Project Structure
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+├── public/ # Static assets
+├── src/ # Main source code
+│ ├── components/ # Reusable UI components
+│ ├── pages/ # Next.js pages
+│ ├── styles/ # Global styles
+│ └── utils/ # Helper functions
+├── package.json
+└── README.md
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+---
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🚀 Getting Started
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+Clone the repo and run locally:
+
+```bash
+# Clone repository
+git clone https://github.com/YOUR-USERNAME/portfolio.git
+
+# Navigate into folder
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Run development server
 npm run dev
+
+Then open http://localhost:3000 to view it.
+
+
+📬 Contact
+
+👨‍💻 Micheal Khan
+
+Portfolio: micheal-khan-portfolio.vercel.app
+
+LinkedIn: [Your LinkedIn URL]
+
+GitHub: [Your GitHub URL]
+
+Email: [Your Email Address]
 ```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/ef4be380-71a1-417d-8afd-82c6bf89c34f) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
