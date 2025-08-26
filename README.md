@@ -69,7 +69,7 @@ npm run dev
 
 Then open http://localhost:3000 to view it.
 
-📬 Contact
+## 📬 Contact
 
 👨‍💻 Micheal Khan
 
