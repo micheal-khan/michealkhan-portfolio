@@ -9,6 +9,7 @@
 This is my personal developer portfolio built with **Next.js** and deployed on **Vercel**.  
 It showcases my projects, skills, and professional journey as a Software Developer.
 
+🔗 **Live Site:** [michealkhan.com](https://michealkhan.com)
 🔗 **Live Site:** [micheal-khan-portfolio.vercel.app](https://micheal-khan-portfolio.vercel.app)
 
 ---
