@@ -7,6 +7,7 @@ import { ExternalLink, Github } from 'lucide-react';
 const projects = [
   {
     title: 'Zenvas',
+    imageUrl: 'projects/zenvas.png',
     description: 'Canva-style design platform with drag-and-drop interface and real-time collaboration.',
     link: 'https://zenvas.vercel.app/',
     tags: ['Next.js', 'React', 'Canvas API', 'Real-time'],
@@ -14,6 +15,7 @@ const projects = [
   },
   {
     title: 'AI Detection Tower',
+    imageUrl: 'projects/ai-detection.png',
     description: 'AI-powered real-time detection system with comprehensive dashboard and analytics.',
     link: 'https://ai-detection-system.vercel.app/',
     tags: ['AI/ML', 'Dashboard', 'Real-time', 'Analytics'],
@@ -21,6 +23,7 @@ const projects = [
   },
   {
     title: 'NIMS University Live Scoring',
+    imageUrl: 'projects/spardha.png',
     description: 'Live scoring system for university sports and events with real-time updates.',
     link: 'https://spardha.nimsuniversity.org/',
     tags: ['Live Updates', 'Sports', 'Dashboard', 'Real-time'],
@@ -28,6 +31,7 @@ const projects = [
   },
   {
     title: 'Apple iPhone 15 Pro Clone',
+    imageUrl: 'projects/apple-website.png',
     description: 'Pixel-perfect recreation of Apple\'s iPhone 15 Pro website with smooth animations.',
     link: 'https://apple-website-micheal.vercel.app/',
     tags: ['Animation', 'UI/UX', 'Responsive', 'Performance'],
@@ -35,6 +39,7 @@ const projects = [
   },
   {
     title: 'Indus Star',
+    imageUrl: 'projects/indis-star.png',
     description: 'Official website for music production house with portfolio and booking system.',
     link: 'https://indusstar.co.in/',
     tags: ['Music', 'Portfolio', 'Booking', 'Creative'],
@@ -42,6 +47,7 @@ const projects = [
   },
   {
     title: 'Pricewise',
+    imageUrl: 'projects/price-wise.png',
     description: 'Web scraping solution for price comparison across multiple e-commerce platforms.',
     link: 'https://pricewise-by-micheal.vercel.app/',
     tags: ['Web Scraping', 'E-commerce', 'Automation', 'APIs'],
@@ -49,6 +55,7 @@ const projects = [
   },
   {
     title: 'VIGOR E-bikes',
+    imageUrl: 'projects/vigore.png',
     description: 'Product information and showcase website for electric bike manufacturer.',
     link: 'https://vigorebike.in/',
     tags: ['Product Showcase', 'E-commerce', 'Green Tech'],
@@ -56,6 +63,7 @@ const projects = [
   },
   {
     title: 'Revolt Track',
+    imageUrl: 'projects/revolt.png',
     description: 'Business and location listing platform with search and filtering capabilities.',
     link: 'https://www.revolttrack.com/',
     tags: ['Business Listings', 'Search', 'Location', 'Directory'],
@@ -63,6 +71,7 @@ const projects = [
   },
   {
     title: 'Rajasthan Bhumi Travels',
+    imageUrl: 'projects/rajasthanbuhmi.png',
     description: 'Tour package booking platform with payment integration and itinerary management.',
     link: 'https://www.rajasthanbhumitours.com/',
     tags: ['Travel', 'Booking', 'Payment', 'Tourism'],
@@ -70,6 +79,7 @@ const projects = [
   },
   {
     title: 'RENIT Classifieds',
+    imageUrl: 'placeholder.svg',
     description: 'Local classifieds and ad listing application with user management.',
     link: 'https://renit.co.in/',
     tags: ['Classifieds', 'User Management', 'Local', 'Community'],
@@ -180,6 +190,7 @@ export default function Projects() {
                     {/* Project Preview */}
                     <div className="aspect-video bg-gradient-to-br from-primary/10 to-transparent relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent z-10" />
+                        <img src={project.imageUrl} />
                       <motion.div
                         className="absolute top-4 right-4 z-20"
                         initial={{ opacity: 0, scale: 0.8 }}
