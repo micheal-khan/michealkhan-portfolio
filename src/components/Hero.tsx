@@ -127,6 +127,7 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4, ease: [0.6, 0.05, 0.01, 0.9] as [number, number, number, number] }}
             className="relative"
           >
+           
             <div className="relative max-w-md mx-auto lg:max-w-none">
               <motion.div
                 className="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-primary/20 to-transparent p-1"
