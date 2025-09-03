@@ -8,12 +8,14 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollVelocity from "@/components/ui/scroll-velocity";
 import SkillLogoLoop from "@/components/SkillLogoLoop";
+import { SmoothCursor } from "@/components/ui/smoothMouse";
 
 const Index = () => {
   console.log("Portfolio app loaded successfully");
 
   return (
     <div className="min-h-screen bg-background">
+      <SmoothCursor />
       <Navigation />
       <main>
         <Hero />
