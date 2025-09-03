@@ -7,6 +7,7 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ScrollVelocity from "@/components/ui/scroll-velocity";
+import SkillLogoLoop from "@/components/SkillLogoLoop";
 
 const Index = () => {
   console.log("Portfolio app loaded successfully");
@@ -24,6 +25,7 @@ const Index = () => {
         </section>
         <About />
         <Skills />
+        <SkillLogoLoop />
         <Experience />
         <Projects />
         <Contact />
