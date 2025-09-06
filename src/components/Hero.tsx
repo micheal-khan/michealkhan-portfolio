@@ -26,7 +26,7 @@ const itemVariants = {
 };
 
 const socialLinks = [
-  { icon: Github, href: 'https://github.com/igniteking', label: 'GitHub' },
+  { icon: Github, href: 'https://github.com/micheal-khan', label: 'GitHub' },
   { icon: Linkedin, href: 'https://www.linkedin.com/in/micheal-khan/', label: 'LinkedIn' },
   { icon: Mail, href: 'mailto:khanzaidan786@gmail.com', label: 'Email' },
   { icon: Phone, href: 'tel:+917727084375', label: 'Phone' },
