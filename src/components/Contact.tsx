@@ -21,7 +21,7 @@ const contactMethods = [
     icon: Github,
     label: "GitHub",
     value: "@igniteking",
-    href: "https://github.com/igniteking",
+    href: "https://github.com/micheal-khan",
   },
   {
     icon: Linkedin,
