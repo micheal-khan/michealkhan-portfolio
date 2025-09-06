@@ -135,7 +135,7 @@ export default function Hero() {
                 transition={{ type: "spring", stiffness: 300, damping: 30 }}
               >
                 <img
-                  src="/lovable-uploads/8c7ed1dc-ea26-451c-8c19-3a812e598c0a.png"
+                  src="/images/micheal-khan-headshot.jpg"
                   alt="Micheal Khan - Software Developer"
                   className="w-full h-full object-cover rounded-xl"
                 />
