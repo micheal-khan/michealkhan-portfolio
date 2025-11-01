@@ -1,98 +1,117 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { ExternalLink, Github } from 'lucide-react';
+import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: 'Zenvas',
-    imageUrl: 'projects/zenvas.png',
-    description: 'Canva-style design platform with drag-and-drop interface and real-time collaboration.',
-    link: 'https://zenvas.vercel.app/',
-    tags: ['Next.js', 'React', 'Canvas API', 'Real-time'],
-    category: 'web',
+    title: "Zee's Taskbar Cat",
+    imageUrl: "projects/zees-cat.png",
+    description:
+      "A fun desktop app built with React and Electron where a cute pixel cat runs across your taskbar whenever you move your mouse — bringing chaos and charm to your workspace.",
+    link: "https://cat.michealkhan.com/",
+    tags: ["React", "Electron", "Desktop App", "Animation", "Fun Project"],
+    category: "desktop",
   },
   {
-    title: 'AI Detection Tower',
-    imageUrl: 'projects/ai-detection.png',
-    description: 'AI-powered real-time detection system with comprehensive dashboard and analytics.',
-    link: 'https://ai-detection-system.vercel.app/',
-    tags: ['AI/ML', 'Dashboard', 'Real-time', 'Analytics'],
-    category: 'ai',
+    title: "Zenvas",
+    imageUrl: "projects/zenvas.png",
+    description:
+      "Canva-style design platform with drag-and-drop interface and real-time collaboration.",
+    link: "https://zenvas.vercel.app/",
+    tags: ["Next.js", "React", "Canvas API", "Real-time"],
+    category: "web",
   },
   {
-    title: 'NIMS University Live Scoring',
-    imageUrl: 'projects/spardha.png',
-    description: 'Live scoring system for university sports and events with real-time updates.',
-    link: 'https://spardha.nimsuniversity.org/',
-    tags: ['Live Updates', 'Sports', 'Dashboard', 'Real-time'],
-    category: 'web',
+    title: "AI Detection Tower",
+    imageUrl: "projects/ai-detection.png",
+    description:
+      "AI-powered real-time detection system with comprehensive dashboard and analytics.",
+    link: "https://ai-detection-system.vercel.app/",
+    tags: ["AI/ML", "Dashboard", "Real-time", "Analytics"],
+    category: "ai",
   },
   {
-    title: 'Apple iPhone 15 Pro Clone',
-    imageUrl: 'projects/apple-website.png',
-    description: 'Pixel-perfect recreation of Apple\'s iPhone 15 Pro website with smooth animations.',
-    link: 'https://apple-website-micheal.vercel.app/',
-    tags: ['Animation', 'UI/UX', 'Responsive', 'Performance'],
-    category: 'web',
+    title: "NIMS University Live Scoring",
+    imageUrl: "projects/spardha.png",
+    description:
+      "Live scoring system for university sports and events with real-time updates.",
+    link: "https://spardha.nimsuniversity.org/",
+    tags: ["Live Updates", "Sports", "Dashboard", "Real-time"],
+    category: "web",
   },
   {
-    title: 'Indus Star',
-    imageUrl: 'projects/indis-star.png',
-    description: 'Official website for music production house with portfolio and booking system.',
-    link: 'https://indusstar.co.in/',
-    tags: ['Music', 'Portfolio', 'Booking', 'Creative'],
-    category: 'business',
+    title: "Apple iPhone 15 Pro Clone",
+    imageUrl: "projects/apple-website.png",
+    description:
+      "Pixel-perfect recreation of Apple's iPhone 15 Pro website with smooth animations.",
+    link: "https://apple-website-micheal.vercel.app/",
+    tags: ["Animation", "UI/UX", "Responsive", "Performance"],
+    category: "web",
   },
   {
-    title: 'Pricewise',
-    imageUrl: 'projects/price-wise.png',
-    description: 'Web scraping solution for price comparison across multiple e-commerce platforms.',
-    link: 'https://pricewise-by-micheal.vercel.app/',
-    tags: ['Web Scraping', 'E-commerce', 'Automation', 'APIs'],
-    category: 'tools',
+    title: "Indus Star",
+    imageUrl: "projects/indis-star.png",
+    description:
+      "Official website for music production house with portfolio and booking system.",
+    link: "https://indusstar.co.in/",
+    tags: ["Music", "Portfolio", "Booking", "Creative"],
+    category: "business",
   },
   {
-    title: 'VIGOR E-bikes',
-    imageUrl: 'projects/vigore.png',
-    description: 'Product information and showcase website for electric bike manufacturer.',
-    link: 'https://vigorebike.in/',
-    tags: ['Product Showcase', 'E-commerce', 'Green Tech'],
-    category: 'business',
+    title: "Pricewise",
+    imageUrl: "projects/price-wise.png",
+    description:
+      "Web scraping solution for price comparison across multiple e-commerce platforms.",
+    link: "https://pricewise-by-micheal.vercel.app/",
+    tags: ["Web Scraping", "E-commerce", "Automation", "APIs"],
+    category: "tools",
   },
   {
-    title: 'Revolt Track',
-    imageUrl: 'projects/revolt.png',
-    description: 'Business and location listing platform with search and filtering capabilities.',
-    link: 'https://www.revolttrack.com/',
-    tags: ['Business Listings', 'Search', 'Location', 'Directory'],
-    category: 'web',
+    title: "VIGOR E-bikes",
+    imageUrl: "projects/vigore.png",
+    description:
+      "Product information and showcase website for electric bike manufacturer.",
+    link: "https://vigorebike.in/",
+    tags: ["Product Showcase", "E-commerce", "Green Tech"],
+    category: "business",
   },
   {
-    title: 'Rajasthan Bhumi Travels',
-    imageUrl: 'projects/rajasthanbuhmi.png',
-    description: 'Tour package booking platform with payment integration and itinerary management.',
-    link: 'https://www.rajasthanbhumitours.com/',
-    tags: ['Travel', 'Booking', 'Payment', 'Tourism'],
-    category: 'business',
+    title: "Revolt Track",
+    imageUrl: "projects/revolt.png",
+    description:
+      "Business and location listing platform with search and filtering capabilities.",
+    link: "https://www.revolttrack.com/",
+    tags: ["Business Listings", "Search", "Location", "Directory"],
+    category: "web",
   },
   {
-    title: 'RENIT Classifieds',
-    imageUrl: 'placeholder.svg',
-    description: 'Local classifieds and ad listing application with user management.',
-    link: 'https://renit.co.in/',
-    tags: ['Classifieds', 'User Management', 'Local', 'Community'],
-    category: 'web',
+    title: "Rajasthan Bhumi Travels",
+    imageUrl: "projects/rajasthanbuhmi.png",
+    description:
+      "Tour package booking platform with payment integration and itinerary management.",
+    link: "https://www.rajasthanbhumitours.com/",
+    tags: ["Travel", "Booking", "Payment", "Tourism"],
+    category: "business",
+  },
+  {
+    title: "RENIT Classifieds",
+    imageUrl: "placeholder.svg",
+    description:
+      "Local classifieds and ad listing application with user management.",
+    link: "https://renit.co.in/",
+    tags: ["Classifieds", "User Management", "Local", "Community"],
+    category: "web",
   },
 ];
 
 const categories = [
-  { key: 'all', label: 'All Projects' },
-  { key: 'web', label: 'Web Apps' },
-  { key: 'ai', label: 'AI/ML' },
-  { key: 'business', label: 'Business' },
-  { key: 'tools', label: 'Tools' },
+  { key: "all", label: "All Projects" },
+  { key: "web", label: "Web Apps" },
+  { key: "ai", label: "AI/ML" },
+  { key: "business", label: "Business" },
+  { key: "tools", label: "Tools" },
 ];
 
 const containerVariants = {
@@ -125,11 +144,12 @@ const itemVariants = {
 };
 
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState('all');
+  const [activeCategory, setActiveCategory] = useState("all");
 
-  const filteredProjects = activeCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === activeCategory);
+  const filteredProjects =
+    activeCategory === "all"
+      ? projects
+      : projects.filter((project) => project.category === activeCategory);
 
   return (
     <section id="projects" className="py-20 bg-muted/20">
@@ -145,8 +165,9 @@ export default function Projects() {
             Featured Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A collection of applications and websites built with modern technologies, 
-            focusing on performance, user experience, and scalability.
+            A collection of applications and websites built with modern
+            technologies, focusing on performance, user experience, and
+            scalability.
           </p>
         </motion.div>
 
@@ -160,8 +181,8 @@ export default function Projects() {
               whileTap={{ scale: 0.95 }}
               className={`px-6 py-3 text-sm font-medium rounded-lg transition-all duration-300 ${
                 activeCategory === category.key
-                  ? 'bg-primary text-primary-foreground shadow-lg'
-                  : 'bg-card/50 text-muted-foreground hover:text-foreground hover:bg-card'
+                  ? "bg-primary text-primary-foreground shadow-lg"
+                  : "bg-card/50 text-muted-foreground hover:text-foreground hover:bg-card"
               }`}
             >
               {category.label}
@@ -190,7 +211,7 @@ export default function Projects() {
                     {/* Project Preview */}
                     <div className="aspect-video bg-gradient-to-br from-primary/10 to-transparent relative overflow-hidden">
                       <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent z-10" />
-                        <img src={project.imageUrl} />
+                      <img src={project.imageUrl} />
                       <motion.div
                         className="absolute top-4 right-4 z-20"
                         initial={{ opacity: 0, scale: 0.8 }}
@@ -229,7 +250,11 @@ export default function Projects() {
 
                       <div className="flex flex-wrap gap-2">
                         {project.tags.map((tag) => (
-                          <Badge key={tag} variant="outline" className="text-xs">
+                          <Badge
+                            key={tag}
+                            variant="outline"
+                            className="text-xs"
+                          >
                             {tag}
                           </Badge>
                         ))}
