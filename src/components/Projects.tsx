@@ -12,7 +12,7 @@ const projects = [
       "A fun desktop app built with React and Electron where a cute pixel cat runs across your taskbar whenever you move your mouse — bringing chaos and charm to your workspace.",
     link: "https://cat.michealkhan.com/",
     tags: ["React", "Electron", "Desktop App", "Animation", "Fun Project"],
-    category: "desktop",
+    category: "community",
   },
   {
     title: "Zenvas",
@@ -108,6 +108,7 @@ const projects = [
 
 const categories = [
   { key: "all", label: "All Projects" },
+  { key: "community", label: "Community Projects" },
   { key: "web", label: "Web Apps" },
   { key: "ai", label: "AI/ML" },
   { key: "business", label: "Business" },
