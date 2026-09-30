@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bline: #323228;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: #0e100f;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: #0e100f;
+  color: #ffffe3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: #a374ff;
+  color: #0e100f;
+}
+
+/* Visible keyboard focus everywhere */
+:focus-visible {
+  outline: 2px solid #18a0fb;
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Thin violet scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #0e100f; }
+::-webkit-scrollbar-thumb { background: #a374ff; border-radius: 999px; }
+
+/* Faint square grid behind the hero */
+.grid-bg {
+  background-image:
+    linear-gradient(to right, rgba(50, 50, 40, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(50, 50, 40, 0.45) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse at center, black 35%, transparent 80%);
+}
+
+.marquee-mask {
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+/* Respect the OS "reduce motion" setting for CSS animations too */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
