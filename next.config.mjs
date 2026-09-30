@@ -10,6 +10,17 @@ const nextConfig = {
     // Inline the (small) Tailwind CSS into the HTML so it doesn't block first paint.
     inlineCss: true,
   },
+  // One canonical domain for SEO: send www.michealkhan.com → michealkhan.com (301).
+  async redirects() {
+    return [
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.michealkhan.com" }],
+        destination: "https://michealkhan.com/:path*",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {
