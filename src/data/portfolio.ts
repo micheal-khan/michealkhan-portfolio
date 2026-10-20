@@ -22,6 +22,7 @@ export const profile = {
   githubLabel: "@igniteking",
   linkedin: "https://www.linkedin.com/in/micheal-khan/",
   resume: "/micheal-khan-resume.pdf",
+  resumeFileName: "Micheal-Resume.pdf", // name the visitor's browser saves the download as
   headshot: "/images/micheal-khan-headshot.jpg",
   about:
     "Versatile Full Stack Software and AI Automation Developer with hands-on experience across CRMs, LMSs, e-commerce platforms, and full-stack web apps. Skilled in Flutter, Next.js, HTML5, JavaScript, PHP, and SQL. Known for clean, scalable code, production-ready AI-integrated tools shipped in days, and solving real-world problems fast.",

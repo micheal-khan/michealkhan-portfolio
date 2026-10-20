@@ -109,7 +109,7 @@ export default function Footer() {
                 <ArrowRight size={16} aria-hidden />
               </span>
             </a>
-            <a href={profile.resume} download className="group flex items-start justify-between gap-3">
+            <a href={profile.resume} download={profile.resumeFileName} className="group flex items-start justify-between gap-3">
               <span>
                 <span className="block text-lg font-medium">Resume</span>
                 <span className="text-xs text-primarytext/70">Download Resume</span>

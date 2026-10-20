@@ -65,7 +65,7 @@ export default function About() {
         <Reveal delay={0.1}>
           <m.a
             href={profile.resume}
-            download
+            download={profile.resumeFileName}
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
             className="group flex items-center gap-3 rounded-full border border-bline px-7 py-4 text-lg transition-colors hover:border-accentv hover:bg-accentv hover:text-bg sm:text-xl"
