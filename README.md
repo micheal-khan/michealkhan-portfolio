@@ -55,6 +55,7 @@ Almost everything lives in **`src/data/portfolio.ts`**:
 
 - Title, description, keywords, canonical, Open Graph and Twitter tags: `src/app/layout.tsx`
 - JSON-LD structured data (Person, WebSite, ProfilePage, project list): `src/app/layout.tsx`
+- Every project has its own page at `/projects/<slug>` (`src/app/projects/[slug]/page.tsx`): unique title, description, canonical, Open Graph and JSON-LD (BreadcrumbList, WebPage, CreativeWork). Add a project to `projects` in `portfolio.ts` and its page + sitemap entry appear automatically.
 - `sitemap.xml`, `robots.txt`, web manifest: `src/app/sitemap.ts`, `robots.ts`, `manifest.ts`
 - Auto-generated share image and favicons: `src/app/opengraph-image.tsx`, `icon.tsx`, `apple-icon.tsx`
 - One `<h1>`, a heading per section, alt text, skip link, visible keyboard focus

@@ -215,6 +215,14 @@ export type Project = {
   image?: string;
 };
 
+// URL slug for each project's own page, e.g. "Zee's Taskbar Cat" -> "zees-taskbar-cat" (/projects/zees-taskbar-cat).
+export const projectSlug = (p: Pick<Project, "name">) =>
+  p.name
+    .toLowerCase()
+    .replace(/['’]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+
 export const projectsIntro =
   "A collection of applications and websites built with modern technologies, focusing on performance, user experience, and scalability.";
 
@@ -222,10 +230,20 @@ export const projects: Project[] = [
   {
     name: "Zestimonial",
     description:
-      "Testimonial collection web app for gathering customer feedback and showcasing social proof on your website.",
-    tags: ["Web App", "Testimonials", "SaaS", "Next.js"],
-    categories: ["web-apps"],
+      "Open-source testimonial workspace to collect, review, approve, publish and export client praise, with Claude AI highlighting the best line. Embed a Wall of Love or rating badge widget live on your site.",
+    tags: ["Next.js 16", "Supabase", "Claude AI", "Open Source", "Testimonials"],
+    categories: ["web-apps", "ai-automation"],
     url: "https://zestimonial.vercel.app/",
+    image: "/projects/zestimonial.jpg",
+  },
+  {
+    name: "Snapbyt",
+    description:
+      "Online store for home essentials — kitchen, garden, cleaning, storage and lighting — with daily deals, a search-first mobile layout, Cash on Delivery and UPI, card and EMI payments, and free shipping over ₹499.",
+    tags: ["Shopify", "E-commerce", "Home Essentials", "Mobile-first"],
+    categories: ["shopify", "ecommerce-booking", "websites"],
+    url: "https://snapbyt.com/",
+    image: "/projects/snapbyt.jpg",
   },
   {
     name: "Meevyy",

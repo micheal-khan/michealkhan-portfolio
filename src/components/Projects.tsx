@@ -2,9 +2,10 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { AnimatePresence, m, useMotionValue, useSpring } from "framer-motion";
-import { ArrowUpRight, Search, X } from "lucide-react";
-import { projectCategories, projects, projectsIntro, type Project, type ProjectCategory } from "../data/portfolio";
+import { ArrowRight, ArrowUpRight, Search, X } from "lucide-react";
+import { projectCategories, projectSlug, projects, projectsIntro, type Project, type ProjectCategory } from "../data/portfolio";
 import Reveal from "./Reveal";
 import { EASE } from "./motion";
 
@@ -218,12 +219,8 @@ export default function Projects() {
               transition={{ duration: 0.45, ease: EASE }}
               className="overflow-hidden border-b border-bline"
             >
-              <a
-                href={p.url}
-                target="_blank"
-                rel="noopener noreferrer"
+              <div
                 onMouseEnter={() => setHovered(p.name)}
-                onFocus={() => setHovered(null)}
                 className="group relative flex flex-col gap-4 px-1 py-8 sm:flex-row sm:items-center sm:justify-between sm:px-10 sm:py-10 lg:px-16"
               >
                 {/* Inline thumbnail on touch / small screens */}
@@ -239,12 +236,19 @@ export default function Projects() {
                   </div>
                 )}
                 <div className="min-w-0">
-                  <h3 className="flex items-center gap-2 text-2xl font-medium transition-colors group-hover:text-accentb sm:text-3xl lg:text-4xl">
-                    <span className="transition-transform duration-300 group-hover:translate-x-2">{p.name}</span>
-                    <ArrowUpRight
-                      aria-hidden
-                      className="shrink-0 -translate-x-2 opacity-0 transition-all duration-300 group-hover:translate-x-2 group-hover:opacity-100"
-                    />
+                  <h3 className="text-2xl font-medium transition-colors group-hover:text-accentb sm:text-3xl lg:text-4xl">
+                    {/* Stretched link: the whole row opens the project's own page (crawlable, indexable). */}
+                    <Link
+                      href={`/projects/${projectSlug(p)}`}
+                      onFocus={() => setHovered(null)}
+                      className="flex items-center gap-2 after:absolute after:inset-0 after:content-['']"
+                    >
+                      <span className="transition-transform duration-300 group-hover:translate-x-2">{p.name}</span>
+                      <ArrowRight
+                        aria-hidden
+                        className="shrink-0 -translate-x-2 opacity-0 transition-all duration-300 group-hover:translate-x-2 group-hover:opacity-100"
+                      />
+                    </Link>
                   </h3>
                   <p className="mt-2 max-w-xl text-sm text-primarytext/70">{p.description}</p>
                   <ul className="mt-3 flex flex-wrap gap-1.5" aria-label="Categories">
@@ -263,13 +267,34 @@ export default function Projects() {
                 <div className="shrink-0 sm:max-w-[16rem] sm:text-right">
                   <p className="text-lg sm:text-xl">{p.tags[0]}</p>
                   <p className="text-xs text-primarytext/70">{p.tags.slice(1).join(", ")}</p>
+                  <a
+                    href={p.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="relative z-10 mt-3 inline-flex items-center gap-1 rounded-full border border-bline px-3 py-1.5 text-xs transition-colors hover:border-accentb hover:text-accentb"
+                  >
+                    Visit live site <ArrowUpRight size={12} aria-hidden />
+                    <span className="sr-only">for {p.name} (opens in a new tab)</span>
+                  </a>
                 </div>
-                <span className="sr-only">(opens in a new tab)</span>
-              </a>
+              </div>
             </m.li>
           ))}
         </AnimatePresence>
       </ul>
+
+      {/* Projects behind "Load More" stay in the HTML as real links so crawlers and screen readers reach every project page. */}
+      {!isFiltering && !showAll && projects.length > INITIAL && (
+        <nav aria-label="More project pages" className="sr-only">
+          <ul>
+            {projects.slice(INITIAL).map((p) => (
+              <li key={p.name}>
+                <Link href={`/projects/${projectSlug(p)}`}>{p.name}</Link>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
 
       {/* Empty state */}
       <AnimatePresence>
