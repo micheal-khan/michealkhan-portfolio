@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { AnimatePresence, m, useMotionValueEvent, useScroll } from "framer-motion";
-import { Home, Briefcase, FolderGit2, UserRound, Mail, Menu, X, ShoppingBag } from "lucide-react";
+import { Home, Briefcase, FolderGit2, UserRound, Mail, Menu, X, ShoppingBag, GraduationCap } from "lucide-react";
 import { profile } from "../data/portfolio";
 
 const links = [
@@ -10,6 +10,7 @@ const links = [
   { href: "#experience", label: "Experience", icon: Briefcase },
   { href: "#shopify", label: "Shopify", icon: ShoppingBag },
   { href: "#projects", label: "My Projects", icon: FolderGit2 },
+  { href: "#education", label: "Education", icon: GraduationCap },
   { href: "#about", label: "About Me", icon: UserRound },
 ];
 

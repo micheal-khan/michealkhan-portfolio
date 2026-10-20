@@ -26,6 +26,7 @@ const explore = [
   { href: "#experience", label: "Experience" },
   { href: "#shopify", label: "Shopify" },
   { href: "#projects", label: "Projects" },
+  { href: "#education", label: "Education" },
   { href: "#about", label: "About Me" },
 ];
 

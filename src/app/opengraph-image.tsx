@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 // 1200×630 share card used by LinkedIn, WhatsApp, X, Slack, etc.
-export const alt = "Micheal Khan — Full-Stack Software Developer in Jaipur, India";
+export const alt = "Micheal Khan — Full Stack Software and AI Automation Developer in Jaipur, India";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -28,15 +28,14 @@ export default function OpengraphImage() {
           <div style={{ width: 22, height: 22, borderRadius: 999, background: "#ffffe3" }} />
           michealkhan
         </div>
-        <div style={{ display: "flex", flexDirection: "column", fontSize: 108, fontWeight: 700, lineHeight: 0.95, letterSpacing: -3 }}>
-          <span style={{ color: "#a374ff" }}>FULL-STACK</span>
-          <span style={{ color: "#ffd074" }}>SOFTWARE</span>
-          <span>
-            DEVELOPER&nbsp;<span style={{ color: "#17f1d1" }}>&amp; AI</span>
-          </span>
+        <div style={{ display: "flex", flexDirection: "column", fontSize: 92, fontWeight: 700, lineHeight: 0.95, letterSpacing: -3 }}>
+          <span style={{ color: "#a374ff" }}>FULL STACK</span>
+          <span style={{ color: "#ffd074" }}>SOFTWARE &amp;</span>
+          <span style={{ color: "#17f1d1" }}>AI AUTOMATION</span>
+          <span>DEVELOPER</span>
         </div>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 28, color: "rgba(255,255,227,0.8)" }}>
-          <span>Flutter • Next.js • PHP • SQL • Shopify</span>
+          <span>Flutter • Next.js • PHP • SQL • AI Automation</span>
           <span>Jaipur, India</span>
         </div>
       </div>

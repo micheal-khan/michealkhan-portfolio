@@ -60,7 +60,7 @@ const fade = (delay: number) => ({
   transition: { delay, duration: 0.6, ease: EASE },
 });
 
-const word = "text-[16vw] sm:text-[12vw] lg:text-[8.25rem] font-medium leading-[0.92] tracking-tight";
+const word = "text-[13.5vw] sm:text-[10.5vw] lg:text-[7.25rem] font-medium leading-[0.92] tracking-tight";
 
 export default function Hero() {
   return (
@@ -92,15 +92,15 @@ export default function Hero() {
       <div className="relative w-full px-3">
         <Cursor label="Flutter" color="#ee46d3" className="left-[26%] top-0" delay={1.1} />
         <Cursor label="Next.js" color="#a374ff" className="right-[3%] top-[45%]" flip delay={1.25} />
-        <Cursor label="Shopify" color="#18a0fb" className="left-[4%] bottom-0" delay={1.4} />
+        <Cursor label="AI Automation" color="#18a0fb" className="left-[4%] bottom-0" delay={1.4} />
 
         <h1 className="flex flex-col items-center text-center">
           <span className="sr-only">
-            {profile.name} — Full-Stack Software Developer &amp; AI Automation Developer in {profile.location}
+            {profile.name} — {profile.title} in {profile.location}
           </span>
 
           <span aria-hidden className="flex items-center justify-center gap-4 sm:ml-10">
-            <MaskWord className={`${word} text-accentv`} delay={0.1}>FULL-STACK</MaskWord>
+            <MaskWord className={`${word} text-accentv`} delay={0.1}>FULL STACK</MaskWord>
             <m.span {...fade(0.8)} className="hidden max-w-[9rem] text-left text-sm font-normal md:block">
               // Based in
               <br />
@@ -109,11 +109,7 @@ export default function Hero() {
           </span>
 
           <span aria-hidden className="block">
-            <MaskWord className={`${word} text-accenty`} delay={0.2}>SOFTWARE</MaskWord>
-          </span>
-
-          <span aria-hidden className="flex items-center justify-center gap-3">
-            <MaskWord className={`${word} text-primarytext`} delay={0.3}>DEVELOPER</MaskWord>
+            <MaskWord className={`${word} text-accenty`} delay={0.2}>SOFTWARE &amp;</MaskWord>
           </span>
 
           <span aria-hidden className="flex items-center justify-center gap-4 sm:mr-24">
@@ -122,9 +118,11 @@ export default function Hero() {
               <br />
               {profile.availability[1]}
             </m.span>
-            <MaskWord className={`${word} text-primarytext`} delay={0.4}>
-              &amp; <span className="text-accentc">AI</span>
-            </MaskWord>
+            <MaskWord className={`${word} text-accentc`} delay={0.3}>AI AUTOMATION</MaskWord>
+          </span>
+
+          <span aria-hidden className="flex items-center justify-center gap-3">
+            <MaskWord className={`${word} text-primarytext`} delay={0.4}>DEVELOPER</MaskWord>
           </span>
         </h1>
       </div>
@@ -134,8 +132,8 @@ export default function Hero() {
         animate={{ y: 0 }}
         transition={{ delay: 0.5, duration: 0.8, ease: EASE }}
         className="mt-8 max-w-2xl px-4 text-center text-xl sm:text-2xl">
-        I build clean, scalable apps fast—
-        <br className="hidden sm:block" />
+        {profile.tagline}
+        <br className="hidden sm:block" />{" "}
         <span className="text-accentv">Flutter</span>, <span className="text-accenty">Next.js</span>,{" "}
         <span className="text-accentc">PHP</span>, <span className="text-accentb">SQL</span>.
       </m.p>

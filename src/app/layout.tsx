@@ -1,7 +1,17 @@
 import type { Metadata, Viewport } from "next";
 import { Hanken_Grotesk } from "next/font/google";
 import MotionProvider from "../components/MotionProvider";
-import { experiences, profile, projects, skillGroups, siteUrl } from "../data/portfolio";
+import {
+  certifications,
+  education,
+  experiences,
+  languages,
+  lastUpdated,
+  profile,
+  projects,
+  skillGroups,
+  siteUrl,
+} from "../data/portfolio";
 import "./globals.css";
 
 const hanken = Hanken_Grotesk({
@@ -10,9 +20,9 @@ const hanken = Hanken_Grotesk({
   display: "swap",
 });
 
-const title = "Micheal Khan — Full-Stack Software Developer in Jaipur";
+const title = "Micheal Khan | Full Stack Software & AI Automation Developer";
 const description =
-  "Micheal Khan is a full-stack software developer in Jaipur, India building clean, scalable apps with Flutter, Next.js, PHP, SQL and Shopify. 5+ years, open to collabs.";
+  "Micheal Khan is a Full Stack Software and AI Automation Developer in Jaipur, India. Flutter, Next.js, PHP, SQL, Shopify and AI tools. Open to freelance work.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -24,9 +34,12 @@ export const metadata: Metadata = {
   publisher: profile.name,
   keywords: [
     "Micheal Khan",
+    "Full Stack Software and AI Automation Developer",
     "Software Developer Jaipur",
-    "Full-Stack Developer",
+    "Full Stack Developer",
     "AI Automation Developer",
+    "AI Automation Developer Jaipur",
+    "Flutter Developer Jaipur",
     "Flutter Developer",
     "Next.js Developer",
     "PHP Developer",
@@ -37,6 +50,8 @@ export const metadata: Metadata = {
   ],
   category: "technology",
   alternates: { canonical: "/" },
+  // Paste your Search Console "HTML tag" token into NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION (Vercel env) to verify ownership.
+  verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION },
   openGraph: {
     type: "profile",
     url: siteUrl,
@@ -78,16 +93,27 @@ const jsonLd = {
       name: profile.name,
       url: siteUrl,
       image: `${siteUrl}${profile.headshot}`,
-      jobTitle: profile.roles,
+      jobTitle: profile.title,
       description: profile.about,
       email: `mailto:${profile.email}`,
+      telephone: profile.phone,
+      knowsLanguage: languages.map((l) => l.code),
+      alumniOf: education
+        .filter((e) => e.school.startsWith("NIMS"))
+        .map((e) => ({ "@type": "CollegeOrUniversity", name: "NIMS University", url: e.url })),
+      hasCredential: certifications.map((c) => ({
+        "@type": "EducationalOccupationalCredential",
+        name: c.name,
+        credentialCategory: "certificate",
+        recognizedBy: { "@type": "Organization", name: c.issuer },
+        ...(c.url ? { url: c.url } : {}),
+      })),
       address: {
         "@type": "PostalAddress",
         addressLocality: "Jaipur",
         addressRegion: "Rajasthan",
         addressCountry: "IN",
       },
-      worksFor: { "@type": "Organization", name: "BIMQP", url: "https://bimqp.com/" },
       sameAs: [profile.github, profile.linkedin],
       knowsAbout: skillGroups.filter((g) => g.name !== "Soft Skills").flatMap((g) => g.items),
       hasOccupation: experiences.map((e) => ({
@@ -111,6 +137,8 @@ const jsonLd = {
       name: title,
       isPartOf: { "@id": `${siteUrl}/#website` },
       mainEntity: { "@id": `${siteUrl}/#person` },
+      dateModified: lastUpdated,
+      description,
       inLanguage: "en-IN",
     },
     {

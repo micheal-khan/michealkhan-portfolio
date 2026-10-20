@@ -1,14 +1,17 @@
-// All content below is taken from michealkhan.com. Edit here to update the site.
+// All content below comes from Micheal's résumé (updated Oct 2026). Edit here to update the site.
 
 export const siteUrl = "https://michealkhan.com";
+
+// Bump when content changes. Used for sitemap <lastmod> and JSON-LD dateModified (Google ignores a lastmod that changes on every build).
+export const lastUpdated = "2026-10-21";
 
 export const profile = {
   name: "Micheal Khan",
   handle: "michealkhan",
   firstName: "Micheal",
-  title: "Software Developer",
-  roles: ["Software Developer", "AI Automation Developer", "Full-Stack Developer"],
-  tagline: "I build clean, scalable apps fast—Flutter, Next.js, PHP, SQL.",
+  title: "Full Stack Software and AI Automation Developer",
+  roles: ["Full Stack Software Developer", "AI Automation Developer", "Software & AI Automation Developer"],
+  tagline: "I build clean, scalable software and AI-powered automation that solves real-world problems fast.",
   location: "Jaipur, India",
   locationLong: "Based in Jaipur, Rajasthan",
   availability: ["Open to collabs", "Remote-friendly"],
@@ -21,10 +24,10 @@ export const profile = {
   resume: "/micheal-khan-resume.pdf",
   headshot: "/images/micheal-khan-headshot.jpg",
   about:
-    "Versatile Software Developer with hands-on experience across CRMs, LMSs, e-commerce, and full-stack web apps. Known for clean, scalable code and rapid delivery. Currently building tools at BIMQP while continuing freelance dev work.",
+    "Versatile Full Stack Software and AI Automation Developer with hands-on experience across CRMs, LMSs, e-commerce platforms, and full-stack web apps. Skilled in Flutter, Next.js, HTML5, JavaScript, PHP, and SQL. Known for clean, scalable code, production-ready AI-integrated tools shipped in days, and solving real-world problems fast.",
   highlights: [
     { title: "5+ years building for web & mobile", sub: "freelance since 2019" },
-    { title: "Stack: Flutter • Next.js • PHP • SQL", sub: "Full-stack expertise" },
+    { title: "Full stack + AI automation", sub: "Flutter • Next.js • PHP • SQL" },
     { title: "Based in Jaipur, Rajasthan", sub: "Remote & on-site ready" },
   ],
   cta: {
@@ -38,49 +41,55 @@ export const profile = {
 export type SkillGroup = {
   name: string;
   color: string; // tailwind text color class
-  icon: "frontend" | "backend" | "mobile" | "database" | "tooling" | "shopify" | "soft";
+  icon: "frontend" | "backend" | "ai" | "mobile" | "database" | "tooling" | "shopify" | "soft";
   items: string[];
 };
 
 export const skillsIntro =
-  "A comprehensive toolkit for building modern, scalable applications across web, mobile, and desktop platforms.";
+  "A full-stack toolkit for building modern, scalable web, mobile and desktop applications — plus AI-powered automation that cuts manual work.";
 
 export const skillGroups: SkillGroup[] = [
   {
     name: "Frontend",
     color: "text-accentv",
     icon: "frontend",
-    items: ["HTML5", "CSS3", "JavaScript", "React", "Next.js", "Tailwind", "Material UI", "Bootstrap", "HTMX", "Cupertino UI"],
+    items: ["HTML5", "CSS3", "JavaScript", "AJAX", "React", "Next.js", "Tailwind", "Material UI", "Bootstrap 5", "HTMX", "Cupertino UI"],
   },
   {
     name: "Backend",
     color: "text-accenty",
     icon: "backend",
-    items: ["PHP 8", "Node.js", "Express", "REST APIs", "Auth", "Database integration"],
+    items: ["PHP 8", "JavaScript", "AJAX", "Node.js", "Express", "REST APIs", "Auth systems", "Database integration"],
+  },
+  {
+    name: "AI & Automation",
+    color: "text-accentc",
+    icon: "ai",
+    items: ["AI-integrated software", "AI-powered internal tools", "Business process automation", "Automation scripting", "Web scraping", "n8n"],
   },
   {
     name: "Mobile & Cross-Platform",
-    color: "text-accentc",
+    color: "text-accentp",
     icon: "mobile",
-    items: ["Flutter", "Dart", "Electron.js", "Tauri 2.0"],
+    items: ["Flutter", "Dart", "JavaScript", "Electron.js", "Tauri 2.0"],
   },
   {
     name: "Databases",
     color: "text-accentb",
     icon: "database",
-    items: ["MySQL", "SQL", "MongoDB", "PostgreSQL", "Supabase", "Convex", "phpMyAdmin"],
+    items: ["MySQL", "SQL", "PostgreSQL", "MongoDB", "Supabase", "Convex", "phpMyAdmin"],
   },
   {
     name: "Tooling",
     color: "text-accentp",
     icon: "tooling",
-    items: ["Git/GitHub", "Netlify", "Vercel", "Firebase", "Linux CLI", "Postman", "Figma", "Web scraping", "Automation scripting", "TypeScript", "Prisma"],
+    items: ["Git/GitHub", "Netlify", "Vercel", "Firebase", "Linux CLI", "Postman", "Figma", "VS Code", "TypeScript", "Prisma"],
   },
   {
-    name: "Shopify",
+    name: "CMS & Shopify",
     color: "text-[#95bf47]",
     icon: "shopify",
-    items: ["Shopify", "Shopify Dev Dashboard", "Store Collaborations"],
+    items: ["Shopify", "Shopify Dev Dashboard", "WordPress", "Wix", "Framer", "FlutterFlow"],
   },
   {
     name: "Soft Skills",
@@ -106,18 +115,35 @@ export const experienceIntro =
 
 export const experiences: Experience[] = [
   {
+    role: "Software & AI Automation Developer",
+    company: "Pixel Lab Media (Ad Peak Media)",
+    companyUrl: "https://pixellab.media/",
+    period: "Apr 2026 – Aug 2026",
+    location: "Jaipur",
+    summary:
+      "Built and deployed production-ready, AI-integrated internal software within 5 days to improve operational efficiency and automate business processes.",
+    achievements: [
+      "Shipped production-ready, AI-integrated internal software solutions in 5 days",
+      "Managed operations across 30+ Shopify stores, keeping daily workflows smooth",
+      "Supervised an intern across software development, AI automation and operations",
+      "Streamlined processes and cut manual work with custom software and AI-powered tools",
+    ],
+    stat: { value: "30+", label: "Shopify Stores Managed" },
+  },
+  {
     role: "Software Developer",
     company: "BIMQP",
     companyUrl: "https://bimqp.com/",
-    period: "Dec 2024 – Present",
+    period: "Dec 2024 – Mar 2026",
     location: "Jaipur",
-    summary: "Internal tools & client web apps using Next.js, Flutter, SQL.",
+    summary:
+      "Developed internal tools and client-facing web applications using Next.js, Flutter and SQL across the full development cycle.",
     achievements: [
       "Refactored legacy codebases for improved maintainability",
-      "Built features from scratch with modern frameworks",
-      "Optimized load times & deployments",
-      "Handled production bugs and system stability",
-      "Aligned UI with business goals and user requirements",
+      "Built new features from the ground up with modern frameworks",
+      "Optimized load times and deployment workflows",
+      "Fixed critical production bugs and kept systems stable and scalable",
+      "Worked with designers and project leads to align UI and backend logic with business goals",
     ],
   },
   {
@@ -126,41 +152,41 @@ export const experiences: Experience[] = [
     period: "Jan 2019 – Present",
     location: "Remote",
     summary:
-      "Full-stack apps across e-commerce, AI tools; handled frontend, backend, deployment using Flutter, Next.js, PHP, SQL.",
+      "Full-stack apps across e-commerce, CRMs, LMSs and AI tools; handled frontend, backend and deployment using Flutter, Next.js, PHP, SQL.",
     achievements: [
       "Built 15+ production applications across various industries",
-      "Managed complete project lifecycle from planning to deployment",
+      "Managed the complete project lifecycle from planning to deployment",
       "Specialized in rapid prototyping and MVP development",
       "Maintained long-term client relationships with quality delivery",
     ],
     stat: { value: "15+", label: "Production Applications" },
   },
   {
-    role: "App Dev / Consultant",
-    company: "RENIT Pvt. Ltd.",
-    companyUrl: "https://renit.co.in/",
+    role: "Application Developer / Consultant",
+    company: "RENIT Private Limited",
+    companyUrl: "https://simplyrenit.com/",
     period: "Mar 2023 – Sep 2023",
     location: "Remote",
-    summary: "Modernized legacy code, improved perf, shipped client-ready solutions across backend + frontend.",
+    summary:
+      "Worked on full-stack web apps as an application developer and consultant, delivering client-ready solutions in a fast-paced, deadline-driven environment.",
     achievements: [
-      "Migrated legacy PHP systems to modern frameworks",
-      "Improved application performance by 40%",
-      "Implemented new security protocols and best practices",
-      "Delivered solutions ahead of schedule consistently",
+      "Modernized legacy code and improved application performance",
+      "Handled both backend logic and frontend interfaces",
+      "Delivered client-ready solutions on tight deadlines",
     ],
-    stat: { value: "40%", label: "Performance Improvement" },
   },
   {
-    role: "Web Dev Consultant",
-    company: "Glowworm Renewable Energy",
+    role: "Web Development Consultant / Developer",
+    company: "Glowworm Renewable Energy Pvt. Ltd.",
     period: "Mar 2021 – Dec 2022",
     location: "Remote",
-    summary: "Built an LMS from scratch; responsive dashboards, course modules, security features.",
+    summary:
+      "Built a full Learning Management System from scratch for internal training with HTML5, Bootstrap and JavaScript.",
     achievements: [
-      "Architected complete Learning Management System",
-      "Implemented secure user authentication and role management",
-      "Built responsive admin dashboards with analytics",
-      "Delivered comprehensive course management features",
+      "Built a complete Learning Management System from scratch",
+      "Developed responsive dashboards and course modules",
+      "Integrated key security features",
+      "Delivered a smooth cross-device experience aligned with business goals",
     ],
   },
 ];
@@ -193,6 +219,14 @@ export const projectsIntro =
   "A collection of applications and websites built with modern technologies, focusing on performance, user experience, and scalability.";
 
 export const projects: Project[] = [
+  {
+    name: "Zestimonial",
+    description:
+      "Testimonial collection web app for gathering customer feedback and showcasing social proof on your website.",
+    tags: ["Web App", "Testimonials", "SaaS", "Next.js"],
+    categories: ["web-apps"],
+    url: "https://zestimonial.vercel.app/",
+  },
   {
     name: "Meevyy",
     description:
@@ -293,6 +327,13 @@ export const projects: Project[] = [
     image: "/projects/rajasthanbuhmi.png",
   },
   {
+    name: "BIMQP",
+    description: "Company website and web platform built and maintained while working as a Software Developer at BIMQP.",
+    tags: ["Web Platform", "Next.js", "Client Work", "Business"],
+    categories: ["web-apps", "websites"],
+    url: "https://bimqp.com/",
+  },
+  {
     name: "RENIT Classifieds",
     description: "Local classifieds and ad listing application with user management.",
     tags: ["Classifieds", "User Management", "Local", "Community"],
@@ -353,4 +394,53 @@ export const techStack: { name: string; icon: string; url: string }[] = [
   { name: "Postman", icon: "postman", url: "https://www.postman.com/" },
   { name: "n8n", icon: "n8n", url: "https://n8n.io/" },
   { name: "Linux", icon: "linux", url: "https://www.kernel.org/" },
+];
+
+export const educationIntro = "Formal education, professional certifications and languages.";
+
+export const education = [
+  {
+    school: "NIMS University, Jaipur",
+    url: "https://admission.nimsuniversity.org/",
+    credential: "Bachelor of Computer Applications",
+    period: "Jul 2021 – May 2024",
+    grade: "~8.00 CGPA",
+    detail:
+      "3-year undergraduate program focused on software development, web technologies and computer networks, with hands-on academic and freelance projects.",
+  },
+  {
+    school: "National Institute of Open Schooling (NIOS)",
+    url: "https://www.nios.ac.in/",
+    credential: "Senior Secondary (Class 12) — Computer Science, English",
+    period: "Mar 2020 – Jul 2021",
+    grade: "8.38 CGPA · 478/600",
+    detail: "Balanced independent study with freelance development work and real-world projects.",
+  },
+  {
+    school: "Jankidevi Public School, Jaipur",
+    url: "https://jankidevipublicschooljaipur.in/",
+    credential: "High School (Class 10, IGCSE)",
+    period: "Mar 2018 – Jul 2019",
+    grade: "",
+    detail: "IGCSE curriculum including English, Mathematics, Science and Information Technology.",
+  },
+];
+
+export const certifications: { name: string; issuer: string; date: string; url?: string }[] = [
+  { name: "Advanced Diploma in Ethical Hacking", issuer: "Samyak Computer Classes", date: "Apr 2025", url: "https://www.samyakinfotech.com/" },
+  { name: "Data Analysis with Python", issuer: "freeCodeCamp", date: "Jun 2021", url: "https://www.freecodecamp.org/certification/igniteking/data-analysis-with-python-v7" },
+  { name: "Responsive Web Design", issuer: "freeCodeCamp", date: "Jun 2019", url: "https://www.freecodecamp.org/certification/igniteking/responsive-web-design" },
+  { name: "Google Analytics for Beginners", issuer: "Google", date: "Jun 2023" },
+  { name: "Basics of Computers & Code in iOS", issuer: "Alison", date: "Jun 2023" },
+  { name: "Diploma in Computer Networking", issuer: "Alison", date: "Feb 2022", url: "https://alison.com/certification/check/20d0749008" },
+  { name: "Google Digital Unlocked – Fundamentals of Digital Marketing", issuer: "Google", date: "Feb 2021" },
+  { name: "Computer Networking – Digital Network Security", issuer: "Alison", date: "Sep 2020", url: "https://alison.com/certification/check/ba58312d35" },
+  { name: "Web Page Design Using HTML5 and CSS3", issuer: "Alison", date: "Oct 2020", url: "https://alison.com/certification/check/38966f8430" },
+];
+
+export const languages = [
+  { name: "English", level: "Professional", code: "en" },
+  { name: "Hindi", level: "Native", code: "hi" },
+  { name: "Urdu", level: "Fluent", code: "ur" },
+  { name: "French", level: "Basic", code: "fr" },
 ];

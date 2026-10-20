@@ -25,6 +25,8 @@ Almost everything lives in **`src/data/portfolio.ts`**:
 | Project filter categories | `projectCategories`, plus `categories: [...]` on each project |
 | Scrolling logo strip | `techStack` |
 | Live domain (used for SEO) | `siteUrl` |
+| Sitemap / schema "last modified" date | `lastUpdated`: bump it when content changes |
+| Education, certifications, languages | `education`, `certifications`, `languages` |
 
 - **Images:** `public/images` (headshot) and `public/projects` (screenshots).
 - **Résumé:** `public/micheal-khan-resume.pdf`. Replace the file and keep the name.
@@ -62,6 +64,7 @@ Lighthouse (production build, local): **Desktop 100 / 100 / 100 / 100 · Mobile 
 
 ### After deploying
 
+0. Optional: add your Search Console HTML-tag token as `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` in Vercel to verify via meta tag.
 1. Set `siteUrl` in `portfolio.ts` if the domain isn't `https://michealkhan.com`.
 2. Add the site to [Google Search Console](https://search.google.com/search-console) and submit `/sitemap.xml`.
 3. Check the share card with LinkedIn's [Post Inspector](https://www.linkedin.com/post-inspector/).

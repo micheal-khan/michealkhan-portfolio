@@ -7,6 +7,7 @@ import Skills from "../components/Skills";
 import ExperienceSection from "../components/Experience";
 import Shopify from "../components/Shopify";
 import Projects from "../components/Projects";
+import Education from "../components/Education";
 import TechStack from "../components/TechStack";
 import Footer from "../components/Footer";
 
@@ -23,6 +24,7 @@ export default function Home() {
         <ExperienceSection />
         <Shopify />
         <Projects />
+        <Education />
         <TechStack />
       </main>
       <Footer />

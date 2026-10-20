@@ -38,6 +38,8 @@ const logo: Record<string, string> = {
   TypeScript: "typescript",
   Prisma: "prisma",
   Shopify: "shopify",
+  WordPress: "wordpress",
+  n8n: "n8n",
   "Shopify Dev Dashboard": "shopify",
 };
 
